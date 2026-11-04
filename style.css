@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --base-bg: #0f0b14;
+  --bg-url: url("./assets/bg-dark-mobile.png");
+}
+
+.light-theme {
+  --base-bg: #f8f6f0;
+  --bg-url: url("./assets/bg-light-mobile.png");
+}
+
+body {
+  background: var(--base-bg) var(--bg-url) no-repeat top center / cover;
+}
