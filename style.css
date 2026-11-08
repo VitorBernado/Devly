@@ -5,15 +5,116 @@
 }
 
 :root {
+  --color-text-primary: #f4f1f7;
+  --color-text-secondary: #a1a1a1;
   --base-bg: #0f0b14;
   --bg-url: url("./assets/bg-dark-mobile.png");
+  --switch-bg-color: #2a2230;
+  --switch-border-color: #4a3a52;
+  --switch-btn-color: #f2edf7;
+  --border-color: #3a2b44;
 }
 
 .light-theme {
+  --color-text-primary: #302a39;
+  --color-text-secondary: #a1a1a1;
   --base-bg: #f8f6f0;
   --bg-url: url("./assets/bg-light-mobile.png");
+  --switch-bg-color: #2a2230;
+  --switch-border-color: #4a3a52;
+  --border-color: #3a2b44;
+  --switch-btn-color: #f2edf7;
 }
 
 body {
   background: var(--base-bg) var(--bg-url) no-repeat top center / cover;
+  font-family: "Inter", sans-serif;
+  color: var(--color-text-primary);
+}
+
+/* Header Styles */
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 24px 24px 0 24px;
+}
+
+.soon {
+  display: flex;
+  align-items: center;
+}
+
+.soon h2 {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.soon span {
+  display: block;
+  background: url(./assets/soon.svg) no-repeat center / contain;
+  width: 23px;
+  height: 18px;
+  margin-right: 9px;
+}
+
+/* switch button styles */
+
+.switch-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.switch-container p {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}
+
+.switch-container .switch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: var(--switch-bg-color);
+  border: 1px solid var(--switch-border-color);
+
+  border-radius: 9999px;
+
+  width: 76px;
+  height: 38px;
+
+  padding: 4px;
+}
+
+.switch-sun,
+.switch-moon {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  width: 15px;
+  height: 15px;
+  margin: 11px;
+}
+
+.switch-sun {
+  background: url(./assets/sun-dark-mode.svg) no-repeat center / contain;
+  left: 0;
+}
+
+.switch-moon {
+  background: url(./assets/moon-dark-mode.svg) no-repeat center / contain;
+  right: 0;
+}
+
+.switch-thumb {
+  position: absolute;
+  background-color: var(--switch-btn-color);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  z-index: 0;
+  left: calc(100% - 34px);
 }
