@@ -1,7 +1,17 @@
+/* Reset CSS */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 :root {
@@ -10,10 +20,17 @@
   --color-text-tertiary: #c7b8e8;
   --base-bg: #0f0b14;
   --bg-url: url("./assets/bg-dark-mobile.png");
+  --nlw-icon: url("./assets/nlw-icon-dark.svg");
+  --book-icon: url("./assets/book-icon-dark.svg");
+  --dev-icon: url("./assets/dev-icon-dark.svg");
+  --compass-icon: url("./assets/compass-icon-dark.svg");
+  --target-link: url("./assets/target-dark-mode.svg");
   --switch-bg-color: #2a2230;
   --switch-border-color: #4a3a52;
   --switch-btn-color: #f2edf7;
   --border-color: #3a2b44;
+  --bg-btn: #1a1420;
+  --shadow-box-color: rgba(0, 0, 0, 0.101961);
 }
 
 .light-theme {
@@ -161,4 +178,114 @@ body {
   font-size: 15px;
   color: var(--color-text-secondary);
   line-height: 1.6;
+}
+
+/* links styles */
+
+.links-container {
+  margin: 32px 24px 0 24px;
+}
+
+.links-container .links-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links-text .strong-text {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--color-text-tertiary);
+}
+
+.links-text .italic-text {
+  font-family: "instrument Serif", serif;
+  color: var(--color-text-secondary);
+  font-size: 16px;
+  font-style: italic;
+}
+
+.links-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+  gap: 12px;
+}
+
+.link a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px;
+  gap: 12px;
+
+  background-color: var(--bg-btn);
+  border: solid 1px var(--border-color);
+
+  border-radius: 18px;
+  box-shadow: 0px 4px 10px var(--shadow-box-color);
+}
+
+.link a:hover {
+  background-color: var(--switch-bg-color);
+}
+
+.link .link-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--switch-bg-color);
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+}
+
+.description-link h3 {
+  color: var(--color-text-primary);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.description-link p {
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.target-link {
+  margin-left: auto;
+  background: var(--target-link) no-repeat center / contain;
+  width: 9px;
+  height: 9px;
+}
+
+/* Icon Style*/
+
+.nlw-icon {
+  display: block;
+  background: var(--nlw-icon) no-repeat center / contain;
+  width: 15.33px;
+  height: 13.42px;
+}
+
+.book-icon {
+  display: block;
+  background: var(--book-icon) no-repeat center / contain;
+  width: 19.17px;
+  height: 17.25px;
+}
+
+.dev-icon {
+  display: block;
+  background: var(--dev-icon) no-repeat center / contain;
+  width: 19.17px;
+  height: 15.33px;
+}
+
+.compass-icon {
+  display: block;
+  background: var(--compass-icon) no-repeat center / contain;
+  width: 19.17px;
+  height: 19.17px;
 }
