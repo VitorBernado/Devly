@@ -25,6 +25,10 @@ a {
   --dev-icon: url("./assets/dev-icon-dark.svg");
   --compass-icon: url("./assets/compass-icon-dark.svg");
   --target-link: url("./assets/target-dark-mode.svg");
+  --github-icon: url("./assets/github-icon-dark.svg");
+  --instragram-icon: url("./assets/instragram-icon-dark.svg");
+  --youtube-icon: url("./assets/youtube-icon-dark.svg");
+  --linkedin-icon: url("./assets/linkedin-icon-dark.svg");
   --switch-bg-color: #2a2230;
   --switch-border-color: #4a3a52;
   --switch-btn-color: #f2edf7;
@@ -288,4 +292,87 @@ body {
   background: var(--compass-icon) no-repeat center / contain;
   width: 19.17px;
   height: 19.17px;
+}
+
+/* social media Style*/
+
+.social-media-container {
+  margin: 32px 24px;
+}
+
+.social-media-container p {
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  margin-bottom: 13px;
+}
+
+.social-media-container ul {
+  display: flex;
+  gap: 10px;
+}
+
+.social-media-container li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 48px;
+  height: 48px;
+  background-color: var(--bg-btn);
+  border-radius: 9999px;
+  border: 1px solid var(--border-color);
+}
+
+.github-icon {
+  display: block;
+  width: 18.01px;
+  height: 20px;
+  background: var(--github-icon) no-repeat center / contain;
+}
+
+.instragram-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: var(--instragram-icon) no-repeat center / contain;
+}
+
+.youtube-icon {
+  display: block;
+  width: 20.05px;
+  height: 14.13px;
+  background: var(--youtube-icon) no-repeat center / contain;
+}
+
+.linkedin-icon {
+  display: block;
+  width: 20px;
+  height: 19px;
+  background: var(--linkedin-icon) no-repeat center / contain;
+}
+
+footer {
+  margin: 0 24px 32px 24px;
+}
+
+footer hr {
+  border: 1px solid var(--border-color);
+  margin-bottom: 24px;
+}
+
+footer p {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+footer p + p {
+  margin-top: 10px;
+}
+
+footer span {
+  color: var(--color-text-tertiary);
+}
+
+footer .creator {
+  text-decoration: underline;
 }
