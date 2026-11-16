@@ -323,6 +323,10 @@ body {
   border: 1px solid var(--border-color);
 }
 
+.social-media-container li:hover {
+  background-color: var(--switch-bg-color);
+}
+
 .github-icon {
   display: block;
   width: 18.01px;
@@ -375,4 +379,46 @@ footer span {
 
 footer .creator {
   text-decoration: underline;
+}
+/* Media Query*/
+
+@media (min-width: 1024px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #header {
+    grid-column: 1 / 3;
+
+    margin: 48px 64px 0 64px;
+  }
+
+  .profile {
+    grid-column: 1;
+
+    margin: 118px 96px 0 100px;
+  }
+
+  .social-media-container {
+    grid-column: 1;
+
+    margin: 28px 96px 108px 100px;
+  }
+
+  .links-container {
+    margin: 118px 100px 0 0;
+  }
+
+  footer {
+    grid-column: 1 / 3;
+
+    margin: 0 64px 32px 64px;
+  }
+
+  footer div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
